@@ -899,7 +899,7 @@ def main():
         def is_question_relevant(question):
             return any(keyword.lower() in question.lower() for keyword in allowed_keywords)
 
-        API_URL = "https://router.huggingface.co/nebius/v1/chat/completions"
+        API_URL = "https://router.huggingface.co/v1/chat/completions"
         headers = {
             "Authorization": f"Bearer {os.environ['Token1']}",
         }
@@ -947,7 +947,7 @@ def main():
                     {"role": "system", "content": context},
                     {"role": "user", "content": message}
                 ],
-                "model": "microsoft/phi-4",
+                "model": "mistralai/Mistral-7B-Instruct-v0.2:featherless-ai",
                 "temperature": 0.4,
                 "max_tokens": 768
             }
@@ -1025,4 +1025,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
