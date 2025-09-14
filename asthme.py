@@ -947,7 +947,7 @@ def main():
                     {"role": "system", "content": context},
                     {"role": "user", "content": message}
                 ],
-                "model": "mistralai/Mistral-7B-Instruct-v0.2:featherless-ai",
+                "model": "meta-llama/Llama-3.3-70B-Instruct:cerebras",
                 "temperature": 0.4,
                 "max_tokens": 768
             }
@@ -1027,3 +1027,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
